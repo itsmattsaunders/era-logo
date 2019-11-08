@@ -1,66 +1,66 @@
-//variables
-$bg: #000;
-$fnt: #FEFEFE;
-
-
-//mixins
-@mixin onHover{
-  content: "";
-  display: block;
-  top: 0;
-  left: 0%;
-  right: 10;
-  bottom: 0;
-  width: 3.5vw;
-  border-bottom: 10px solid pink;
-  margin: 0 auto;
-  -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
-  transition: width 2s;
+@mixin webGrad{
+  background: rgb(80,109,238);
+  background: linear-gradient(225deg, rgba(80,109,238,0.7525672804532578) 0%, rgba(0,212,255,1) 100%);
 }
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@mixin gameGrad{
+  background: rgb(255,0,0);
+  background: linear-gradient(225deg, rgba(255,0,0,0.908000700280112) 0%, rgba(255,132,0,0.8883928571428571) 100%);
 }
 
-.container{
-  width: 100%;
-  height: 100%;
-  text-align: center;
+@mixin graphGrad{
+  background: rgb(171,250,91);
+  background: linear-gradient(225deg, rgba(171,250,91,0.908000700280112) 0%, rgba(0,255,8,0.8883928571428571) 100%);
 }
 
-body{
-  background-color: $bg;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-h1{
-  font-size: 3.5rem;
-  color: $fnt;
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.era{
-  display: inline-block;
-  width: 1vw;
-  margin: 10%;
-  text-align: center;
-  padding: 0;
-  // cursor: pointer;
-
+body {
+    background-color: black;
+    height: 100vh;
 }
 
-#E:hover::after{
-  @include onHover;
+h1 {
+    font-size: 3.5rem;
+    color: white;
 }
 
-// #E:hover{
-//   @include onHover;
+.era {
+    width: 0vw;
+    height: 0.5vw;
+    margin: 10%;
+    padding-left: 12px;
+    transition: width 1.5s ease;
+}
+
+// .era:hover {
+//     width: 4.5vw;
+//     background-color: red;
 // }
 
-#R:hover::after{
-  @include onHover;
+#E:hover{
+  width: 4.5vw;
+  @include webGrad;
 }
 
-#A:hover::after{
-  @include onHover;
+#R:hover{
+  width: 4.5vw;
+  @include gameGrad;
+}
+
+#A:hover{
+  width: 4.5vw;
+  @include graphGrad;
 }

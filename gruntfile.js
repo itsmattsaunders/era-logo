@@ -1,18 +1,22 @@
 module.exports = function(grunt) {
-  grunt.initConfig({
-    sass: {                              // Task
-      dist: {                            // Target
-        options: {                       // Target options
-          style: 'expanded'
-        },
-        files: {                         // Dictionary of files
-          'style.css': 'style.scss',       // 'destination': 'source'
+    grunt.initConfig({
+        sass: {
+			dist: {
+				files: {
+					'css/style.css': 'css/style.scss'
+				}
+			}
+		},
+        watch: {
+			sass: {
+				files: ['css/style.scss'],
+				tasks: ['sass']
+			},
         }
-      }
-    }
-  });
+    });
 
-  grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-sass');
 
-  grunt.registerTask('runSass', ['sass']);
+    grunt.registerTask('default', ['watch']);
 };

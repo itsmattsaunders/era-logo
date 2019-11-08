@@ -16,5 +16,13 @@
     "css"
   ],
   "author": "Matt Saunders",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-sass": "^1.0.0",
+    "sass": "^1.23.3"
+  },
+  "dependencies": {
+    "ruby": "^0.6.1"
+  }
 }

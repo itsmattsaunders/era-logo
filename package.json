@@ -1,0 +1,20 @@
+{
+  "name": "era-logo",
+  "version": "1.0.0",
+  "description": "A type of navigation, or logo, or something... of sorts.",
+  "main": "index.html",
+  "scripts": {
+    "test": "run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/ThisIsMattSaunders/"
+  },
+  "keywords": [
+    "exhibition",
+    "era",
+    "css"
+  ],
+  "author": "Matt Saunders",
+  "license": "ISC"
+}
